@@ -1,0 +1,8 @@
+LOG:  database system was shut down at 2017-12-20 23:12:50 PST
+LOG:  MultiXact member wraparound protections are now enabled
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+FATAL:  database "vitafit_rails_development" does not exist
+ERROR:  function gen_random_uuid() does not exist
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+STATEMENT:  CREATE TABLE "blog_posts" ("id" uuid DEFAULT gen_random_uuid() NOT NULL PRIMARY KEY, "title" character varying, "content" character varying, "author" character varying, "date" timestamp, "views" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)
