@@ -1,17 +1,15 @@
-# require 'test_helper'
+require 'rails_helper'
 
-# describe BlogPostsController do 
+describe Api::BlogPostsController do 
 
-#   before do
-#     BlogEntry.create!(title: "first ever blog!")
-#     BlogEntry.create!(title: "and then there were 2!")
-#   end
+  before do
+    BlogPost.create!(title: "first ever blog!")
+    BlogPost.create!(title: "and then there were 2!")
+  end
   
-#   it "returns all blog entries" do
-#     expect( BlogEntry.count ).to eq 100
-#     binding.pry
-#     # BlogEntriesController.new.index
-#   end
+  it "returns all blog entries" do
+    expect( BlogPost.count ).to eq 2
+  end
  
-# end
+end
 

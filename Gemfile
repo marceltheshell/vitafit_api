@@ -21,6 +21,7 @@ group :development, :test do
   gem 'capybara', '~> 2.13'
   gem 'pry'
   gem 'selenium-webdriver'
+  gem 'webmock'
 end
 
 group :development do

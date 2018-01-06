@@ -15,7 +15,6 @@ class BlogPostsControllerTest < ActionDispatch::IntegrationTest
     
     it "returns all blog entries" do
       expect( BlogEntry.count ).to eq 100
-      binding.pry
       # BlogEntriesController.new.index
     end
     
