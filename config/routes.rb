@@ -5,5 +5,8 @@ Rails.application.routes.draw do
     post    '/blog',       to: 'blog_posts#create'
     put     '/blog/:id',   to: 'blog_posts#edit'
     delete  '/blog/:id',   to: 'blog_posts#delete'
+
+    get     '/contacts',   to: 'contacts#index'
+    post    '/contacts',   to: 'contacts#create'
   end
 end
