@@ -16,7 +16,7 @@ module VitafitRails
     end
 
     config.action_dispatch.default_headers = {
-      'Access-Control-Allow-Origin' => 'http://localhost:4200/',
+      'Access-Control-Allow-Origin' => 'http://localhost:4200',
       'Access-Control-Request-Method' => %w{GET POST PUT DELETE OPTIONS}.join(",")
     }
 
