@@ -24,9 +24,10 @@ Things you may want to cover:
 * ...
 
 
-The requests used to test the api: 
+The CURL requests used to test the api: 
 BlogPosts
 GET   curl "http://localhost:3000/api/blog"
+POST  curl -X POST "http://localhost:3000/api/blog" -H "accept: application/json" -H "Content-Type: application/json" -d '{"blog_post": {"title": "Extra extra, read all about it!", "content": "Mayra is the coolest"}}'
 
 
 Contacts

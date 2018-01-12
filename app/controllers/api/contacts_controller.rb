@@ -7,7 +7,6 @@ class Api::ContactsController < ApplicationController
 
   def create
     contact = Contact.new(contact_params)
-
     if contact.save
       ok_message = "Contact Saved"
       render json: ok_message, status: 200
