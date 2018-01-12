@@ -15,6 +15,11 @@ module VitafitRails
       g.orm :active_record, primary_key_type: :uuid
     end
 
+    config.action_dispatch.default_headers = {
+      'Access-Control-Allow-Origin' => 'http://localhost:4200/',
+      'Access-Control-Request-Method' => %w{GET POST PUT DELETE OPTIONS}.join(",")
+    }
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
