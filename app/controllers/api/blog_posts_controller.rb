@@ -16,7 +16,7 @@ class Api::BlogPostsController < ApplicationController
       ok_message = "BlogPost Saved"
       render json: ok_message, status: 200
     else
-      err_message = "Socurry there was a problem"
+      err_message = "Sorry there was a problem"
       render json: err_message, status: 500
     end
   end
@@ -27,7 +27,7 @@ class Api::BlogPostsController < ApplicationController
       ok_message = "BlogPost Updated"
       render json: ok_message, status: 200
     else
-      err_message = "Socurry there was a problem"
+      err_message = "Sorry there was a problem"
       render json: err_message, status: 500
     end
   end
@@ -38,7 +38,7 @@ class Api::BlogPostsController < ApplicationController
       message = "deleted blog-post #{params[:id]}"
       render json: message, status: 200
     else
-      err_message = "Socurry there was a problem"
+      err_message = "Sorry there was a problem"
       render json: err_message, status: 500
     end
   end
