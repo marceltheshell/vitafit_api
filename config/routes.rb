@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     put     '/blog/:id',   to: 'blog_posts#edit'
     delete  '/blog/:id',   to: 'blog_posts#delete'
 
-    get     '/contacts',   to: 'contacts#index'
-    post    '/contacts',   to: 'contacts#create'
+    get     '/contact',   to: 'contacts#index'
+    post    '/contact',   to: 'contacts#create'
   end
 end
