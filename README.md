@@ -31,5 +31,4 @@ POST  curl -X POST "http://localhost:3000/api/blog" -H "accept: application/json
 
 
 Contacts
-GET   curl "http://localhost:3000/api/contacts"
-POST  curl -X POST "http://localhost:3000/api/contacts" -H "accept: application/json" -H "Content-Type: application/json" -d '{"contact": {"name": "Marcel Degas", "email": "marcel.degas@gmail.com"}}' 
+curl -X POST "http://localhost:3000/api/contacts" -H "accept: application/json" -H "Content-Type: application/json" -d '{"first_name":"animal", "last_name":"chief","email":"marcel.degas@gmail.com","message":"Hey Im excited to work together!"}' 

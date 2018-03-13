@@ -27,7 +27,8 @@ ActiveRecord::Schema.define(version: 20180112223520) do
   end
 
   create_table "contacts", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
-    t.string "name"
+    t.string "first_name"
+    t.string "last_name"
     t.string "email"
     t.string "message"
     t.datetime "created_at", null: false

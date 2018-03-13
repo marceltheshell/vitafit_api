@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
   namespace :api do 
-    get     '/blog',       to: 'blog_posts#index'
-    post    '/blog',       to: 'blog_posts#create'
-    get     '/blog/:id',   to: 'blog_posts#show'
-    put     '/blog/:id',   to: 'blog_posts#edit'
-    delete  '/blog/:id',   to: 'blog_posts#delete'
+    get     '/blogs',       to: 'blog_posts#index'
+    post    '/blogs',       to: 'blog_posts#create'
+    get     '/blogs/:id',   to: 'blog_posts#show'
+    put     '/blogs/:id',   to: 'blog_posts#edit'
+    delete  '/blogs/:id',   to: 'blog_posts#delete'
 
-    get     '/contact',   to: 'contacts#index'
-    post    '/contact',   to: 'contacts#create'
+    get     '/contacts',   to: 'contacts#index'
+    post    '/contacts',   to: 'contacts#create'
   end
 end

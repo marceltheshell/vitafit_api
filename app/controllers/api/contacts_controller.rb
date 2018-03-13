@@ -6,8 +6,9 @@ class Api::ContactsController < ApplicationController
   end
 
   def create
-    contact = Contact.new(contact_params)
-    if contact.save
+    @contact = Contact.new(contact_params)
+    if @contact.save
+      NewContactMailer.new.send_mail(@contact.id)
       ok_message = "Contact Saved"
       render json: ok_message, status: 200
     else
@@ -19,7 +20,7 @@ class Api::ContactsController < ApplicationController
   private
 
   def contact_params
-    params.require(:contact).permit(:name, :email, :message)
+    params.require(:contact).permit(:first_name, :last_name, :email, :message)
   end
 
 end
