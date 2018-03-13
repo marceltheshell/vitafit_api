@@ -4,13 +4,14 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-    <h1>Welcome to example.com, <%= @user.name %></h1>
+    <h1>Howdy Mayra,</h1>
     <p>
-      You have successfully signed up to example.com,
-      your username is: <%= @user.login %>.<br>
+      Great news! <%= @contact.first_name %> <%= @contact.last_name %> just reached out to you with this message: 
     </p>
+    <br>
+    <p><%= @contact.message %></p>
     <p>
-      To login to the site, just follow this link: <%= @url %>.
+      A welcome email has been sent. <%= @contact.first_name %> can be reached at <%= @contact.email %>
     </p>
     <p>Thanks for joining and have a great day!</p>
   </body>
