@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Howdy Mayra,</h1>
+    <p>
+      Great news! <%= @contact.first_name %> <%= @contact.last_name %> just reached out to you with this message: 
+    </p>
+    <br>
+    <p><%= @contact.message %></p>
+    <p>
+      A welcome email has been sent. <%= @contact.first_name %> can be reached at <%= @contact.email %>
+    </p>
+    <p>Thanks for joining and have a great day!</p>
+  </body>
+</html>

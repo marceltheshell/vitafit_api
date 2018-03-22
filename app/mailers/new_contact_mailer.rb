@@ -2,7 +2,7 @@ class NewContactMailer < ApplicationMailer
   default from: 'notifications@example.com'
 
   def send_mail(contact_id)
-    binding.pry
+    # binding.pry
     mayra_email  = 'mayratn.hall@gmail.com'
     @contact = Contact.find(contact_id)
 
