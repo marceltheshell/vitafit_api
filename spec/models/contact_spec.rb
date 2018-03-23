@@ -1,5 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe Contact, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it "responds to first_name"
+  it "responds to last_name"
+  it "responds to email"
+  it "responds to message"
+  it "validates an email exists"
 end
