@@ -11,11 +11,3 @@ class ContactMailer < ApplicationMailer
       template_name: 'welcome')
   end
 end
-
-
-
-
-# mail(:to => contact.email, :subject => subject) do |format|
-#       format.text
-#       # format.html
-#     end
