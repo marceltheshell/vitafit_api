@@ -1,5 +1,8 @@
 require "rails_helper"
 
 RSpec.describe ContactMailer, type: :mailer do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe 'welcome' do
+    contact = Contact.create!(first_name: "pipita", last_name: "higuain", email: "marcel.degas@gmail.com")
+    email = ContactMailer.welcome(contact)
+  end
 end

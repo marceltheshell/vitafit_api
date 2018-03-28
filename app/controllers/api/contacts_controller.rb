@@ -6,10 +6,9 @@ class Api::ContactsController < ApplicationController
   end
 
   def create
-    binding.pry
     @contact = Contact.new(contact_params)
     if @contact.save
-      NewContactMailer.new.send_mail(@contact.id)
+      ContactMailer.send_mail(@contact)
       ok_message = "Contact Saved"
       render json: ok_message, status: 200
     else

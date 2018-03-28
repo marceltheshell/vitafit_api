@@ -6,17 +6,15 @@ RSpec.describe Blog, type: :model do
   it { should respond_to(:author) }
   it { should respond_to(:views) }
 
+  
   context 'validations' do 
-
-    let (:blog) {Blog.create!(title: "new blog!", content: "this is content!")}
-
   	it { should validate_presence_of(:title) }
   	it { should validate_presence_of(:author) }
   	it { should validate_presence_of(:views) } 
-
   end
   
   context 'defaults' do
+    let (:blog) {Blog.create!(title: "new blog!", content: "this is content!")}
 
     it 'author should default to MayraHall' do 
       expect(blog.author).to eq("MayraHall")

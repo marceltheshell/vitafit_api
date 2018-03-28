@@ -1,14 +1,21 @@
 class ContactMailer < ApplicationMailer
   default from: 'mayratn.hall@gmail.com'
 
-  def response_email(contact_id)
-    contact = Contact.find(contact_id)
-
-    mail(   :to      => contact.email
-            :subject => 'Meeting your health goals with VitaFit'
-    ) do |format|
-      format.text
-      format.html
-    end
+  def welcome(contact)
+    @contact = contact
+    subject = 'Welcome to VitaFit'
+    mail(
+      to: contact.email,
+      subject: 'Welcome to VitaFit',
+      template_path: 'contact_mailer',
+      template_name: 'welcome')
   end
 end
+
+
+
+
+# mail(:to => contact.email, :subject => subject) do |format|
+#       format.text
+#       # format.html
+#     end
