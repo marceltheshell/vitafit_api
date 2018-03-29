@@ -1,5 +1,5 @@
 class Api::BlogsController < ApplicationController
-  skip_before_action :verify_authenticity_token
+  protect_from_forgery :null_session
   def index
     blogs = Blog.all
     render json: blogs.as_json, status: :ok

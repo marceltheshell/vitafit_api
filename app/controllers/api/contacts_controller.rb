@@ -1,5 +1,5 @@
 class Api::ContactsController < ApplicationController
-  skip_before_action :verify_authenticity_token
+  protect_from_forgery :null_session
   def index
     contacts = Contact.all 
     render json: contacts.as_json, status: 200
@@ -8,7 +8,6 @@ class Api::ContactsController < ApplicationController
   def create
     @contact = Contact.new(contact_params)
     if @contact.save
-      ContactMailer.send_mail(@contact)
       ok_message = "Contact Saved"
       render json: ok_message, status: 200
     else
