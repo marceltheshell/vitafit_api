@@ -1,5 +1,5 @@
 class Api::BlogsController < ApplicationController
-  protect_from_forgery :null_session
+  protect_from_forgery with: :null_session
   def index
     blogs = Blog.all
     render json: blogs.as_json, status: :ok

@@ -1,5 +1,6 @@
-# was the web request successful?
-# was the user redirected to the right page?
-# was the user successfully authenticated?
-# was the correct object stored in the response template?
-# was the appropriate message displayed to the user in the view?
+require 'rails_helper'
+
+RSpec.describe Api::BlogsController, type: :controller do
+  it "shows a 404 page when user puts in wrong url"
+
+end
