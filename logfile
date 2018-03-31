@@ -4,3 +4,6 @@ LOG:  database system is ready to accept connections
 LOG:  autovacuum launcher started
 FATAL:  database "vitafit_api_development" does not exist
 LOG:  unexpected EOF on client connection with an open transaction
+ERROR:  database "vitafit_api_development" is being accessed by other users
+DETAIL:  There is 1 other session using the database.
+STATEMENT:  DROP DATABASE IF EXISTS "vitafit_api_development"
